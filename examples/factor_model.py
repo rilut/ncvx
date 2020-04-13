@@ -58,7 +58,7 @@ prob.solve(method="relax-round-polish", solver=SCS)
 print("Relax-round-polish value", cost.value)
 
 # Nuclear norm heurstic
-gamma = Parameter(sign="positive")
+gamma = Parameter(pos=True)
 Sigma_lr = Semidef(n)
 reg = trace(Sigma_lr)
 D_vec = Variable(n)
